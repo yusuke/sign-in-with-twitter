@@ -7,9 +7,9 @@
     <name>Web Application</name>
     <repositories>
         <repository>
-            <id>net.homeip.yusuke</id>
-            <name>net.homeip.yusuke</name>
-            <url>http://yusuke.homeip.net/maven2/</url>
+            <id>org.twitter4j</id>
+            <name>org.twitter4j</name>
+            <url>http://org.twitter4j/maven2/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -26,9 +26,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.homeip.yusuke</groupId>
-            <artifactId>twitter4j</artifactId>
-            <version>2.0.10-SNAPSHOT</version>
+            <groupId>org.twitter4j</groupId>
+            <artifactId>twitter4j-core</artifactId>
+            <version>2.1.11</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

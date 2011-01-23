@@ -28,6 +28,7 @@ package twitter4j.examples.signin;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
 import twitter4j.http.RequestToken;
 
 import javax.servlet.ServletException;
@@ -40,7 +41,7 @@ public class SigninServlet extends HttpServlet {
     private static final long serialVersionUID = -6205814293093350242L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Twitter twitter = new Twitter();
+        Twitter twitter = new TwitterFactory().getInstance();
         request.getSession().setAttribute("twitter", twitter);
         try {
             StringBuffer callbackURL = request.getRequestURL();

@@ -28,7 +28,7 @@ package twitter4j.examples.signin;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
-import twitter4j.http.RequestToken;
+import twitter4j.auth.RequestToken;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -49,6 +49,6 @@ public class CallbackServlet extends HttpServlet {
         } catch (TwitterException e) {
             throw new ServletException(e);
         }
-        response.sendRedirect(request.getContextPath()+ "/");
+        response.sendRedirect(request.getContextPath() + "/");
     }
 }

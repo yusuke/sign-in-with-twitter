@@ -27,6 +27,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package twitter4j.examples.signin;
 
 import twitter4j.Twitter;
+import twitter4j.conf.Configuration;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.RequestToken;
@@ -41,7 +42,11 @@ public class SigninServlet extends HttpServlet {
     private static final long serialVersionUID = -6205814293093350242L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Twitter twitter = new TwitterFactory().getInstance();
+	  ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
+        configurationBuilder.setOAuthConsumerKey("YOUR-OAUTH-CONSUMER-KEY");
+        configurationBuilder.setOAuthConsumerSecret("YOUR-OAUTH-CONSUMER-SECRET");
+        Configuration configuration = configurationBuilder.build();
+        Twitter twitter = new TwitterFactory(configuration).getInstance();
         request.getSession().setAttribute("twitter", twitter);
         try {
             StringBuffer callbackURL = request.getRequestURL();

@@ -9,7 +9,7 @@
         <repository>
             <id>org.twitter4j</id>
             <name>org.twitter4j</name>
-            <url>http://org.twitter4j/maven2/</url>
+            <url>https://org.twitter4j/maven2/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
